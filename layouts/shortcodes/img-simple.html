@@ -1,0 +1,4 @@
+{{- $img := .Get "src" -}}
+{{- $image := resources.Get $img -}}
+{{ $lqip := $image.Resize $.Site.Params.lqipWidth -}}
+<img class="img-simple img-fluid lazyload blur-up" src="{{ $lqip.Permalink }}" data-src="{{ $image.Permalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>

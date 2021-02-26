@@ -1,0 +1,47 @@
+# Meta Data for SEO
+
+## Homepage
+title = "Project Wormhole"
+titleSeparator = "-"
+titleAddition = "Connects the world"
+description = "Project Wormhole is a OpenSource project aimed to provide Open Standard allows people on different Apps to communicate with each other by secure, fast, and reliable protocol."
+
+## Open Graph + Twitter Cards
+images = [""]
+twitterSite = ""
+twitterCreator = ""
+facebookAuthor = ""
+facebookPublisher = ""
+ogLocale = "en_US"
+
+## JSON-LD
+schemaType = "Organization"
+schemaLogo = ""
+schemaTwitter = ""
+schemaLinkedIn = ""
+schemaGitHub = "https://github.com/project-wormhole"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+
+# Footer
+footer = "Powered by Project Wormhole"
+
+# Alert
+alert = false
+alertText = ""
+
+# Edit Page
+docsRepo = "https://github.com/project-wormhole"
+editPage = false
