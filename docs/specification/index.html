@@ -1,0 +1,197 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=preload as=font href=https://project-wormhole.github.io/fonts/vendor/opensans/OpenSans-Light.ttf type=font/ttf crossorigin><link rel=preload as=font href=https://project-wormhole.github.io/fonts/vendor/opensans/OpenSans-SemiBold.ttf type=font/ttf crossorigin><link rel=stylesheet href=https://project-wormhole.github.io/main.8df570f5b68fa6e024b5f092859aa003740b88bdd38edf2b7c19ccfc4702ea47325e968bd3a188ca0a1340ce03f89c2430ac2520565f40b68873994a20503a3e.css integrity="sha512-jfVw9baPpuAktfCShZqgA3QLiL3Tjt8rfBnM/EcC6kcyXpaL06GIygoTQM4D+JwkMKwlIFZfQLaIc5lKIFA6Pg==" crossorigin=anonymous><noscript><style>img.lazyload{display:none}</style></noscript><meta name=robots content="index, follow"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><title>Specification - Project Wormhole</title><meta name=description content="Specification of Wormhole project"><link rel=canonical href=https://project-wormhole.github.io/docs/specification/><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://project-wormhole.github.io/docs/specification/wormhole_architecture.png"><meta name=twitter:title content="Specification"><meta name=twitter:description content="Specification of Wormhole project"><meta name=twitter:site content="@"><meta name=twitter:creator content="@"><meta property="og:title" content="Specification"><meta property="og:description" content="Specification of Wormhole project"><meta property="og:type" content="article"><meta property="og:url" content="https://project-wormhole.github.io/docs/specification/"><meta property="og:image" content="https://project-wormhole.github.io/docs/specification/wormhole_architecture.png"><meta property="article:published_time" content="2020-11-16T13:59:39+01:00"><meta property="article:modified_time" content="2020-11-16T13:59:39+01:00"><meta property="og:site_name" content="Project Wormhole"><meta property="article:publisher" content="https://www.facebook.com/"><meta property="article:author" content="https://www.facebook.com/"><meta property="og:locale" content="en_US"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/project-wormhole.github.io\/"},{"@type":"ListItem","position":2,"name":"Docs","item":"https:\/\/project-wormhole.github.io\/docs\/"},{"@type":"ListItem","position":3,"name":"Specification","item":"https:\/\/project-wormhole.github.io\/docs\/specification\/"}]}</script><meta name=theme-color content="#fff"><link rel=apple-touch-icon sizes=180x180 href=https://project-wormhole.github.io/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://project-wormhole.github.io/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://project-wormhole.github.io/favicon-16x16.png><link rel=manifest href=https://project-wormhole.github.io/site.webmanifest></head><body class="docs single"><div class="header-bar fixed-top"></div><header class="navbar fixed-top navbar-expand-md navbar-light"><div class=container><input class="menu-btn order-0" type=checkbox id=menu-btn>
+<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label><a class="navbar-brand order-1 order-md-0 mr-auto" href=https://project-wormhole.github.io/>Project Wormhole</a>
+<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
+<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span><span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></button><ul class="navbar-nav social-nav order-3 order-md-5"><li class=nav-item><a class=nav-link href=https://github.com/project-wormhole><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77a5.44 5.44.0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ml-2 sr-only">GitHub</span></a></li></ul><div class="collapse navbar-collapse order-4 order-md-1"><ul class="navbar-nav main-nav mr-auto order-5 order-md-2"><li class="nav-item active"><a class=nav-link href=https://project-wormhole.github.io/docs/introduction/>Docs</a></li><li class=nav-item><a class=nav-link href=https://project-wormhole.github.io/blog/>Blog</a></li></ul><div class="break order-6 d-md-none"></div><form class="navbar-form flex-grow-1 order-7 order-md-3"><input id=userinput class="form-control is-search" type=search placeholder="Search docs..." aria-label="Search docs..." autocomplete=off><div id=suggestions class="shadow bg-white rounded"></div></form></div></div></header><div class="wrap container" role=document><div class=content><div class="row flex-xl-nowrap"><div class="col-lg-5 col-xl-4 docs-sidebar"><nav class=docs-links aria-label="Main navigation"><h3>Docs</h3><ul class=list-unstyled><li><a class=docs-link href=https://project-wormhole.github.io/docs/introduction/>Introduction</a></li><li><a class="docs-link active" href=https://project-wormhole.github.io/docs/specification/>Specification</a></li></ul></nav></div><nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation"><div class=page-links><h3>On this page</h3><nav id=TableOfContents><ul><li><a href=#architecture>Architecture</a></li><li><a href=#wormhole-server-apis>Wormhole Server APIs</a><ul><li><a href=#registration>Registration</a></li><li><a href=#sending-messages>Sending Messages</a></li><li><a href=#attachments>Attachments</a></li></ul></li><li><a href=#specification-versions>Specification Versions</a></li></ul></nav></div></nav><main class="docs-content col-lg-11 col-xl-9"><h1>Specification</h1><p class=lead></p><p>Wormhole server APIs are forked from <a href=https://github.com/signalapp/Signal-Server>Signal Server</a>. Wormhole modified various features to support cross App communication.</p><h2 id=architecture>Architecture<a href=#architecture class=anchor aria-hidden=true>#</a></h2><p>All apps send messages to their original IM server if their client tries to communicate with users in the same app. However, if clients try to send messages to another App, the messages will be delivered to the Wormhole server and then passed to the intended recipients via Wormhole SDKs. All messages are encrypted on the client side to make sure the Wormhole can’t see its content. Also, Wormhole will only store non private data to protect the user and partner’s privacy.<br><figure class=border-0><img class="img-fluid lazyload" data-sizes=auto src=https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_20x0_resize_box_2.png data-srcset="https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_900x0_resize_box_2.png 900w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_800x0_resize_box_2.png 800w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_700x0_resize_box_2.png 700w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_600x0_resize_box_2.png 600w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_500x0_resize_box_2.png 500w" width=898 height=851 alt="Wormhole sequence diagram"><noscript><img class=img-fluid sizes=100vw srcset="https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_900x0_resize_box_2.png 900w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_800x0_resize_box_2.png 800w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_700x0_resize_box_2.png 700w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_600x0_resize_box_2.png 600w,https://project-wormhole.github.io/images/wormhole_architecture_hub7316eff6756055f81e7e68c1b2b81ea_110437_500x0_resize_box_2.png 500w" src=https://project-wormhole.github.io/images/wormhole_architecture.png width=898 height=851 alt="Wormhole sequence diagram"></noscript><figcaption class=figure-caption><em>Wormhole sequence diagram</em></figcaption></figure></p><h2 id=wormhole-server-apis>Wormhole Server APIs<a href=#wormhole-server-apis class=anchor aria-hidden=true>#</a></h2><h3 id=registration>Registration<a href=#registration class=anchor aria-hidden=true>#</a></h3><h4 id=request-a-verification-code>Request a verification code<a href=#request-a-verification-code class=anchor aria-hidden=true>#</a></h4><pre><code>GET /v1/accounts/sms/code/{number}
+</code></pre><p>The client requests an SMS verification code for the client&rsquo;s PSTN number.</p><ol><li><code>number</code> is the client&rsquo;s PSTN number.</li></ol><p><strong>Returns</strong>:</p><ol><li><code>200</code> request was processed successfully.</li><li><code>400</code> badly formatted <code>number</code>.</li><li><code>415</code> invalid <code>transport</code>.</li><li><code>413</code> rate limit exceeded. Too many requests.</li></ol><h4 id=confirm-a-verification-code>Confirm a verification code<a href=#confirm-a-verification-code class=anchor aria-hidden=true>#</a></h4><pre><code>PUT /v1/acccounts/code/{verification_code}
+Authorization: Basic {basic_auth}
+X-PKG-NAME: {package_name}
+X-PKG-TOKEN: {package_token}
+
+{
+  &quot;signalingKey&quot; : &quot;{base64_encoded_52_byte_key}&quot;,
+  &quot;supportsSms&quot; : false,
+  &quot;registrationId&quot; : &quot;{14-bit number}&quot;
+}
+</code></pre><p>The client submits the verification code it received via voice or SMS to the server for confirmation.</p><ol><li><code>verification_code</code> is the code it received via voice or SMS, numeric only.</li><li><code>basic_auth</code> are the authorization credentials the client would like to create. These are in the form of <code>Base64({number}:{password})</code>, where <code>number</code> is the client&rsquo;s verified PSTN number and <code>password</code> is a randomly generated 16 byte ASCII string.</li><li><code>package_name</code> is the App&rsquo;s package used to distinguish between apps.</li><li><code>package_token</code> is the token provided by <code>Project Wormhole</code> after registered to <code>Project Wormhole</code>.</li><li><code>signalingKey</code> is a randomly generated 32 byte AES key and a 20 byte HMAC-SHA1 MAC key, concatenated together and Base64 encoded.</li><li><code>supportsSms</code> indicates whether a client supports SMS as a transport.</li><li><code>registrationId</code> is a 14 bit integer that&rsquo;s randomly generated at client install time. This will be used for clients to detect whether an app has reinstalled and lost their session state.</li></ol><p><strong>Returns</strong>:</p><ol><li><code>200</code> account successfully verified.</li><li><code>401</code> badly formatted <code>basic_auth</code>.</li><li><code>403</code> incorrect <code>verification_code</code>.</li><li><code>413</code> rate limit exceeded.</li><li><code>417</code> number already registered.</li></ol><h4 id=registering-an-apn-or-gcm-id>Registering an APN or GCM id<a href=#registering-an-apn-or-gcm-id class=anchor aria-hidden=true>#</a></h4><pre><code>PUT /v1/accounts/{push_channel}/
+Authorization: Basic {basic_auth}
+X-PKG-NAME: {package_name}
+X-PKG-TOKEN: {package_token}
+
+{
+  &quot;apnRegistrationId&quot;: &quot;{apn_registration_id}&quot;,
+  &quot;gcmRegistrationId&quot;: &quot;{gcm_registration_id}&quot;
+}
+</code></pre><p>The client submits its APN or GCM push registration ID.</p><ol><li><code>push_channel</code> is the string <code>apn</code> or <code>gms</code>, depending on device.</li><li><code>basic_auth</code> is the client&rsquo;s authorization credentials (see above).</li><li><code>gcm_registration_id</code> or <code>apn_registration_id</code> is the client&rsquo;s registration ID.</li></ol><p><strong>Returns</strong>:</p><ol><li><code>200</code> request succeeded.</li><li><code>401</code> invalid authentication credentials.</li><li><code>415</code> badly formatted JSON.</li></ol><p>To unregister from the server, send the same request with method <code>DELETE</code>.</p><h4 id=registering-prekeys>Registering prekeys<a href=#registering-prekeys class=anchor aria-hidden=true>#</a></h4><pre><code>PUT /v2/keys/ 
+Authorization: Basic {basic_auth}
+X-PKG-NAME: {package_name}
+X-PKG-TOKEN: {package_token}
+
+{
+  lastResortKey : {
+                   keyId: 0xFFFFFF
+                   publicKey: &quot;{public_key}&quot;
+                   identityKey: &quot;{identity_key}&quot;
+                  },
+   keys: [
+         {
+          keyId: {key_id},
+          publicKey: &quot;{public_key}&quot;,
+          identityKey: &quot;{identity_key}&quot;
+         },
+         ...]
+}
+</code></pre><ol><li><code>public_key</code> is a randomly generated Curve25519 public key with a leading byte of <code>0x05</code> to indicate its type. This is a total of 33 bytes, base64 encoded without padding (no ==).</li><li><code>identity_key</code> is a Curve25519 public key with a leading byte of <code>0x05</code> to indicate its type. This is a total of 33 bytes, base64 encoded without padding (no ==). Each client should have a single identity key generated at install time.</li><li><code>key_id</code> each prekey has a unique 24bit identifier. The last resort key is always 0xFFFFFF.</li></ol><p><strong>Returns</strong>:</p><ol><li><code>200</code> request succeeded.</li><li><code>401</code> invalid authentication credentials.</li><li><code>415</code> badly formatted JSON.</li></ol><h4 id=getting-a-contact-intersection>Getting a contact intersection<a href=#getting-a-contact-intersection class=anchor aria-hidden=true>#</a></h4><pre><code>PUT /v1/directory/tokens
+Authorization: Basic {basic_auth}
+X-PKG-NAME: {package_name}
+X-PKG-TOKEN: {package_token}
+
+{
+  &quot;contacts&quot;: [ &quot;{token}&quot;, &quot;{token}&quot;, ..., &quot;{token}&quot; ]
+}
+</code></pre><ol><li><code>token</code> is Base64(SHA1(E164number)[0:10]) without Base64 padding.</li></ol><p><strong>Returns</strong>:</p><ol><li><code>400</code> badly formatted token(s).</li><li><code>401</code> invalid authentication credentials.</li><li><code>415</code> badly formatted JSON.</li><li><code>200</code> request succeeded. The structure below is returned.</li></ol><pre><code>{
+  contacts: [{token=&quot;{token}&quot;, relay=&quot;{relay}&quot;, supportsSms=&quot;true&quot;},
+             {token=&quot;{token}&quot;},
+             ...,
+             {token=&quot;tokenN&quot;, relay=&quot;{relay}&quot;}]
+}
+</code></pre><ol><li><code>token</code> is Base64(SHA1(E164number)[0:10]) without Base64 padding.</li><li><code>relay</code> is the name of a federated node which this contact is associated with.</li><li><code>supportsSms</code> indicates that the contact supports the SMS transport.</li></ol><p>At this point the client should be fully registered.</p><h3 id=sending-messages>Sending Messages<a href=#sending-messages class=anchor aria-hidden=true>#</a></h3><h4 id=message-format>Message Format<a href=#message-format class=anchor aria-hidden=true>#</a></h4><p>Messages bodies sent and received by clients are a protocol buffer structure:</p><pre><code>message PushMessageContent {
+  message AttachmentPointer {
+    optional fixed64 id          = 1;
+    optional string  contentType = 2;
+    optional bytes   key         = 3;
+  }
+
+  message GroupContext {
+    enum Type {
+      UNKNOWN = 0;
+      UPDATE  = 1;
+      DELIVER = 2;
+      QUIT    = 3;
+    }
+    optional bytes             id      = 1;
+    optional Type              type    = 2;
+    optional string            name    = 3;
+    repeated string            members = 4;
+    optional AttachmentPointer avatar  = 5;
+  }
+
+  enum Flags {
+    END_SESSION = 1;
+  }
+
+  optional string            body        = 1;
+  repeated AttachmentPointer attachments = 2;
+  optional GroupContext      group       = 3;
+  optional Flags             flags       = 4;
+}
+</code></pre><h4 id=getting-a-recipients-prekey>Getting a recipient&rsquo;s PreKey<a href=#getting-a-recipients-prekey class=anchor aria-hidden=true>#</a></h4><p>If a client does not have an existing session with a recipient, the client will need to retrieve a PreKey for the recipient in order to start one.</p><pre><code>GET /v2/keys/{number}/{device_id}?relay={relay}
+Authorization: Basic {basic_auth}
+X-PKG-NAME: {package_name}
+X-PKG-TOKEN: {package_token}
+</code></pre><ol><li><code>number</code> is the number of the recipient.</li><li><code>device_id</code> is the device id of the recipient, or <code>*</code> for all devices.</li><li><code>relay</code> (optional) is the federated relay the recipient is associated with. The <code>relay</code> param should only be included if the destination is at a federated node other than the sender.</li></ol><p><strong>Returns</strong>:</p><ol><li><code>401</code> invalid authentication credentials.</li><li><code>413</code> rate limit exceeded.</li><li><code>404</code> unknown/unregistered <code>number</code>.</li><li><code>200</code> request succeeded. The structure below is returned.</li></ol><pre><code>{
+  &quot;keys&quot; : [
+    {
+      &quot;deviceId&quot;: {device_id},
+      &quot;keyId&quot;: {key_id},
+      &quot;publicKey&quot;: &quot;{public_key}&quot;,
+      &quot;identityKey&quot;: &quot;{public_key}&quot;    
+    },
+    ...
+  ]
+}
+</code></pre><h4 id=submitting-a-message>Submitting a message<a href=#submitting-a-message class=anchor aria-hidden=true>#</a></h4><pre><code>PUT /v1/messages/{destination_number}
+Authorization Basic {basic_auth}
+X-PKG-NAME: {package_name}
+X-PKG-TOKEN: {package_token}
+
+{
+  relay: &quot;{relay}&quot;,
+  messages: [{
+               type: {type},
+               destinationDeviceId: {destination_device_id},
+               destinationRegistrationId: {destination_registration_id},
+               body: &quot;{base64_encoded_message_body}&quot;, // Encrypted PushMessageContent
+               timestamp: &quot;{time_sent_millis_since_epoc}&quot;
+              },
+             ...,
+             ]
+}
+</code></pre><ol><li><code>destination_number</code> is the PSTN number of the message recipient.</li><li><code>relay</code> (optional) is the relay the message recipient is registered with.</li><li><code>type</code> is the type of message. Supported types are enumerated below.</li><li><code>destination_device_id</code> is the target device the message corresponds to for the <code>destination_number</code>.</li><li><code>body</code> is the Base64 encoded (without padding) and encrypted <code>PushMessageContent</code> (above).</li><li><code>timestamp_sent_millis_since_epoch</code> is the timestamp of the message in millis since the epoch.</li></ol><p><strong>Returns</strong>:</p><ol><li><code>401</code> invalid authentication credentials.</li><li><code>409</code> mismatched devices.</li><li><code>410</code> stale devices.</li><li><code>413</code> rate limit exceeded.</li><li><code>415</code> badly formatted JSON.</li><li><code>200</code> request succeeded.</li></ol><p><strong>409 Mismatched Devices</strong>:</p><p>This return code indicates that the devices in <code>messages</code> do not match the registered devices for <code>destination_number</code>. The response body indicates the mismatch:</p><pre><code>{
+  missingDevices: [{missing_device_id}, {another_missing_device_id}, ...],
+  extraDevices: [{device_id_doesnt_exist}, ...]
+}
+</code></pre><p><strong>410 Stale Devices</strong>:</p><p>This return code indicates that a target device has re-installed and the requesting client is sending a message for a stale session. The response body indicates which devices are affected:</p><pre><code>{
+  staleDevices: [{stale_device_id}, ...]
+}
+</code></pre><h4 id=receiving-a-message>Receiving a message<a href=#receiving-a-message class=anchor aria-hidden=true>#</a></h4><p>APN clients will receive a push notification:</p><pre><code>{
+  alert: &quot;You have a new message!&quot;,
+  &quot;m&quot;: &quot;{payload}&quot;
+}
+</code></pre><p>GCM clients will receive a push notification:</p><pre><code>{payload}
+</code></pre><ol><li><code>payload</code> is a Base64 encoded (without padding) <code>IncomingPushMessageSignal</code>, which is encrypted and MAC&rsquo;d using the <code>signalingKey</code> submitted during registration.</li></ol><p>Encrypted IncomingPushMessageSignal format:</p><pre><code>struct {
+  opaque version[1];
+  opaque iv[16];
+  opaque ciphertext[...]; // The IncomingPushMessageSignal
+  opaque mac[10];
+}
+</code></pre><p>The IncomingPushMessageSignal protocol buffer:</p><pre><code>message IncomingPushMessageSignal {
+  enum Type {
+    UNKNOWN       = 0;
+    CIPHERTEXT    = 1;
+    KEY_EXCHANGE  = 2;
+    PREKEY_BUNDLE = 3;
+    PLAINTEXT     = 4;
+  }
+  optional Type   type         = 1;
+  optional string source       = 2;
+  optional uint32 sourceDevice = 7;
+  optional string relay        = 3;
+  optional uint64 timestamp    = 5;
+  optional bytes  message      = 6; // Contains an encrypted PushMessageContent
+}
+</code></pre><h3 id=attachments>Attachments<a href=#attachments class=anchor aria-hidden=true>#</a></h3><p>Recall that a push message is transmitted as the following structure:</p><pre><code>message PushMessageContent {
+  message AttachmentPointer {
+    optional fixed64 id          = 1;
+    optional string  contentType = 2;
+    optional bytes   key         = 3;
+  }
+
+  message GroupContext {
+    enum Type {
+      UNKNOWN = 0;
+      UPDATE  = 1;
+      DELIVER = 2;
+      QUIT    = 3;
+    }
+    optional bytes             id      = 1;
+    optional Type              type    = 2;
+    optional string            name    = 3;
+    repeated string            members = 4;
+    optional AttachmentPointer avatar  = 5;
+  }
+
+  enum Flags {
+    END_SESSION = 1;
+  }
+
+  optional string            body        = 1;
+  repeated AttachmentPointer attachments = 2;
+  optional GroupContext      group       = 3;
+  optional Flags             flags       = 4;
+}
+</code></pre><p>To fill out the <code>AttachmentPointer</code> structure, the client takes the following steps:</p><ol><li>Generates a single-use 32 byte AES key and 32 byte Hmac-SHA256 key.</li><li>Encrypts the attachment using AES in CBC mode with PKCS#5 padding and a random IV, then formats the encrypted blob as <code>IV || Ciphertext || MAC</code>.</li><li>Requests an attachment allocation from the server.</li><li>Uploads the attachment to the allocation.</li><li>Constructs the <code>AttachmentPointer</code> with the attachment allocation <code>id</code>, the attachment&rsquo;s MIME <code>contentType</code>, and the concatenated 32 byte AES and 32 byte Hmac-SHA256 <code>key</code>.</li></ol><h4 id=allocating-an-attachment>Allocating an attachment<a href=#allocating-an-attachment class=anchor aria-hidden=true>#</a></h4><pre><code>GET /v1/attachments/
+Authorization: {basic_auth}
+</code></pre><p><strong>Returns</strong>:</p><ol><li><code>401</code> invalid authentication credentials.</li><li><code>413</code> rate limit exceeded.</li><li><code>200</code> request succeeded. The structure below is returned.</li></ol><pre><code>{
+  &quot;id&quot; : &quot;{attachment_id}&quot;,
+  &quot;location&quot; : &quot;{attachment_url}&quot;
+}
+</code></pre><h4 id=uploading-an-attachment>Uploading an attachment<a href=#uploading-an-attachment class=anchor aria-hidden=true>#</a></h4><pre><code>PUT {attachment_url}
+Content-Type: application/octet-stream
+</code></pre><p>The client <code>PUT</code>s the encrypted binary blob to the <code>attachment_url</code> returned from the attachment allocation step.</p><h4 id=retrieving-an-attachment>Retrieving an attachment<a href=#retrieving-an-attachment class=anchor aria-hidden=true>#</a></h4><pre><code>GET /v1/attachments/{attachment_id}
+Authorization: {basic_auth}
+X-PKG-NAME: {package_name}
+X-PKG-TOKEN: {package_token}
+</code></pre><ol><li><code>attachment_id</code> is the <code>id</code> in a received <code>AttachmentPointer</code> protocol buffer.</li></ol><p><strong>Returns</strong></p><ol><li><code>401</code> invalid authentication credentials.</li><li><code>413</code> rate limit exceeded.</li><li><code>200</code> request succeeded. The structure below is returned.</li></ol><pre><code>{
+  &quot;location&quot; : &quot;{attachment_url}&quot;
+}
+</code></pre><p>The client can now <code>GET {attachment_url}</code> to retrieve the encrypted binary blob.</p><h2 id=specification-versions>Specification Versions<a href=#specification-versions class=anchor aria-hidden=true>#</a></h2><div class="docs-navigation d-flex justify-content-between"><a href=https://project-wormhole.github.io/docs/introduction/><div class="card my-1"><div class="card-body py-2">&larr; Introduction</div></div></a></div></main></div></div></div><footer class="footer text-muted"><div class=container><div class=row><div class="col-lg-8 order-last order-lg-first"><ul class=list-inline><li class=list-inline-item>Powered by Project Wormhole</li></ul></div><div class="col-lg-8 order-first order-lg-last text-lg-right"><ul class=list-inline></ul></div></div></div></footer><script src=https://project-wormhole.github.io/main.f6b484f556ad1f3bcf6061082139a2f21fa759f13930c39a25fe4a9f78f35e64122c2d86dffd56e67b292dabbda4095d8077194f196e0e348441c106a9f3d40e.js integrity="sha512-9rSE9VatHzvPYGEIITmi8h+nWfE5MMOaJf5Kn3jzXmQSLC2G3/1W5nspLau9pAldgHcZTxluDjSEQcEGqfPUDg==" crossorigin=anonymous defer></script><script src=https://project-wormhole.github.io/index.min.53291ca47c5f17579b70f1f0fc9744c2bffc5769a1e5357e805c44c3430d8f76b5a88d3cb12fc7e6a6f31e006fb7c9b3f9a39acbc2872a1c774da07dde6fc376.js integrity="sha512-UykcpHxfF1ebcPHw/JdEwr/8V2mh5TV+gFxEw0MNj3a1qI08sS/H5qbzHgBvt8mz+aOay8KHKhx3TaB93m/Ddg==" crossorigin=anonymous defer></script></body></html>
