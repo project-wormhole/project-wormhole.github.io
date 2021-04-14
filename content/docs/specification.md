@@ -16,7 +16,6 @@ Wormhole server APIs are forked from [Signal Server](https://github.com/signalap
 
 ## Architecture
 All apps send messages to their original IM server if their client tries to communicate with users in the same app. However, if clients try to send messages to another App, the messages will be delivered to the Wormhole server and then passed to the intended recipients via Wormhole SDKs. All messages are encrypted on the client side to make sure the Wormhole can’t see its content. Also, Wormhole will only store non private data to protect the user and partner’s privacy.  
-{{< img src="images/wormhole_architecture.png" alt="Wormhole sequence diagram" caption="<em>Wormhole sequence diagram</em>" class="border-0" >}}
 
 
 
@@ -61,7 +60,7 @@ The client submits the verification code it received via voice or SMS to the ser
 1. `verification_code` is the code it received via voice or SMS, numeric only.
 2. `basic_auth` are the authorization credentials the client would like to create.  These are in the form of `Base64({number}:{password})`, where `number` is the client's verified PSTN number and `password` is a randomly generated 16 byte ASCII string.
 3. `package_name` is the App's package used to distinguish between apps.
-4. `package_token` is the token provided by `Project Wormhole` after registered to `Project Wormhole`.
+4. `package_token` is the token provided by `Wormhole` after registered to `Wormhole`.
 5. `signalingKey` is a randomly generated 32 byte AES key and a 20 byte HMAC-SHA1 MAC key, concatenated together and Base64 encoded.
 6. `supportsSms` indicates whether a client supports SMS as a transport.
 7. `registrationId` is a 14 bit integer that's randomly generated at client install time. This will be used for clients to detect whether an app has reinstalled and lost their session state.

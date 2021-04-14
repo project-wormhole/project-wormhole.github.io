@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Project Wormhole"
+title = "Wormhole"
 titleSeparator = "-"
 titleAddition = "Connects the world"
-description = "Project Wormhole is a OpenSource project aimed to provide Open Standard allows people on different Apps to communicate with each other by secure, fast, and reliable protocol."
+description = "Wormhole is a Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
 
 ## Open Graph + Twitter Cards
 images = [""]
@@ -36,7 +36,7 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "Powered by Project Wormhole"
+footer = "Powered by Wormhole"
 
 # Alert
 alert = false
