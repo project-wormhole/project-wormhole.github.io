@@ -4,7 +4,7 @@
 title = "Wormhole"
 titleSeparator = "-"
 titleAddition = "Connects the world"
-description = "A Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
+description = "An Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
 
 ## Open Graph + Twitter Cards
 images = [""]

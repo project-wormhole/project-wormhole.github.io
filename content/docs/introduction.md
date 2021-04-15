@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-description: "Wormhole is a Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
-lead: "Wormhole is a Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
+description: "Wormhole is an Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
+lead: "Wormhole is an Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
