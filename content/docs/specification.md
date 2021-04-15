@@ -15,7 +15,7 @@ toc: true
 Wormhole server APIs are forked from [Signal Server](https://github.com/signalapp/Signal-Server). Wormhole modified various features to support cross App communication. 
 
 ## Architecture
-All apps send messages to their original IM server if their client tries to communicate with users in the same app. However, if clients try to send messages to another App, the messages will be delivered to the Wormhole server and then passed to the intended recipients via Wormhole SDKs. All messages are encrypted on the client side to make sure the Wormhole can’t see its content. Also, Wormhole will only store non private data to protect the user and partner’s privacy.  
+All apps send messages to their original IM server if their client tries to communicate with users in the same app. However, if clients try to send messages to another App, the messages will be delivered to the Wormhole server and then passed to the intended recipients via Wormhole SDKs. All messages are encrypted on the client side to make sure the Wormhole can’t see its content. Also, Wormhole will only store non-private data to protect the user and partner’s privacy.  
 
 
 

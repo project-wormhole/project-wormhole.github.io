@@ -15,7 +15,7 @@ toc: true
 
 ## How does it work?
 ### Intra and Inter Messaging
-Only inter-app messages are go through wormhole server, intra messages will have no difference. We provide client SDKs which help you to integrate with least effort.
+Only inter-app messages are go through wormhole server, intra messages will have no difference. We provide client SDKs which help you to integrate with the least effort.
 
 ### Messaging
 * Restful APIs is provided to register user, create chats and complete with E2EE etc.
@@ -23,7 +23,7 @@ Only inter-app messages are go through wormhole server, intra messages will have
 * WebRTC is introduced to secure real-time voice and video calls over the web.
 ### Security
 * Double Ratchet algorithm is used to exchange encrypted messages based on a shared secret key 
-* X3DH key agreement protoco is integrated and used as the Double Ratchet's initial root key
+* X3DH key agreement protocol is integrated and used as the Double Ratchet's initial root key
 * Sesame algorithm for managing message encryption sessions in an asynchronous and multi-device setting
 ### Privacy
 * Profile and Picture names and pictures let people know who is messaging them. Wormhole service has no knowledge of them since they are end-to-end encrypted
@@ -37,5 +37,5 @@ Wormhole is based on Signal project and plan to provide
   * Application Server
 * Open Standard
   * Inter-service communication protocol
-* Standalong service
+* Standalone service
   * Production grad inter-service messaging service
