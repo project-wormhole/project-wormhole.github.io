@@ -4,7 +4,7 @@
 title = "Wormhole"
 titleSeparator = "-"
 titleAddition = "Connects the world"
-description = "Wormhole is a Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
+description = "A Open Source project aimed to provide Open Standard allows people on different apps to communicate with each other by secure, fast, and reliable protocol."
 
 ## Open Graph + Twitter Cards
 images = [""]
@@ -16,7 +16,7 @@ ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
-schemaLogo = ""
+schemaLogo = "ic_wormhole_logo_b.png"
 schemaTwitter = ""
 schemaLinkedIn = ""
 schemaGitHub = "https://github.com/project-wormhole"

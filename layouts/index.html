@@ -2,7 +2,7 @@
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
-      <h1 class="mt-0">{{ .Title }}</h1>
+      <h1 class="mt-0"><img class="img-simple img-fluid lazyload blur-up" src="ic_wormhole_landscape_w.png" data-src="ic_wormhole_landscape_w.png" width="500px" > </h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
@@ -18,29 +18,34 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Messaging</h2>
+        <h2 class="h4">💬 Messaging</h2>
         <p>We believe there shouldn't be a border wall. People should be able messaging between Apps with no trouble.</p>
       </div>
 
       <div class="col-lg-5">
-        <h2 class="h4">Security</h2>
-        <p>State-of-the-art end-to-end encryption powered by <a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md">Olm</a> keeps your communications secure. Wormhole's encryption is based on the <a href="https://signal.org/docs/specifications/doubleratchet/">Double Ratchet Algorithm</a> popularised by Signal and implemented by Matrix.org</a> </p>
+        <h2 class="h4">🛡️ Security</h2>
+        <p>State-of-the-art end-to-end encryption powered by <a href="https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/olm.md">Olm</a> (based on the <a href="https://signal.org/docs/specifications/doubleratchet/">Double Ratchet Algorithm</a> popularised by Signal and implemented by Matrix.org) keeps your communications secure.</a> </p>
       </div>
       
       
     </div>
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Open source, Open standard</h2>
-        <p>Open standard defines a set of open APIs for inter-app communication. Open source implementation as well as standalong messageing service are also provided.</p>
+        <h2 class="h4">📑 Open standard</h2>
+        <p>Open standard defines a set of open APIs for inter-app communication which includes registration, contact, and messaging.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Privacy</h2>
-        <p>User and Your Data are our top priority. Wormhole is designed NOT able to see the user's message (messages are encrypted) and won't store private data.</p>
+        <h2 class="h4">🔥 Open source</h2>
+        <p>Open source SDK and server side implementation will be delivered in the near future.</p>
       </div>
-      
+      <div class="col-lg-5">
+        <h2 class="h4">🔐 Privacy</h2>
+        <p>User and Your Data are our top priority. Wormhole is designed NOT able to see the user's message and won't store private data.</p>
+      </div>
+     
     </div>
   </div>
+  
 </section>
 {{ end }}
 
