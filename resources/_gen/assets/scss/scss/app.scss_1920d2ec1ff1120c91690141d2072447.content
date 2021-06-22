@@ -35,7 +35,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Jost", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Gellix", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -54,7 +54,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Jost", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Gellix", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4758,7 +4758,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Jost", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Gellix", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4843,7 +4843,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Jost", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Gellix", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7649,56 +7649,56 @@ a.text-dark:hover, a.text-dark:focus {
 /** Import theme styles */
 /* jost-regular - latin */
 @font-face {
-  font-family: "Jost";
+  font-family: "Gellix";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Jost"), url("fonts/vendor/jost/jost-v4-latin-regular.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-regular.woff") format("woff");
+  src: local("Gellix"), url("fonts/vendor/jost/jost-v4-latin-regular.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 /* jost-500 - latin */
 @font-face {
-  font-family: "Jost";
+  font-family: "Gellix";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Jost"), url("fonts/vendor/jost/jost-v4-latin-500.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-500.woff") format("woff");
+  src: local("Gellix"), url("fonts/vendor/jost/jost-v4-latin-500.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-500.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 /* jost-700 - latin */
 @font-face {
-  font-family: "Jost";
+  font-family: "Gellix";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Jost"), url("fonts/vendor/jost/jost-v4-latin-700.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-700.woff") format("woff");
+  src: local("Gellix"), url("fonts/vendor/jost/jost-v4-latin-700.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 /* jost-italic - latin */
 @font-face {
-  font-family: "Jost";
+  font-family: "Gellix";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local("Jost"), url("fonts/vendor/jost/jost-v4-latin-italic.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-italic.woff") format("woff");
+  src: local("Gellix"), url("fonts/vendor/jost/jost-v4-latin-italic.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 /* jost-500italic - latin */
 @font-face {
-  font-family: "Jost";
+  font-family: "Gellix";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: local("Jost"), url("fonts/vendor/jost/jost-v4-latin-500italic.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-500italic.woff") format("woff");
+  src: local("Gellix"), url("fonts/vendor/jost/jost-v4-latin-500italic.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-500italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 /* jost-700italic - latin */
 @font-face {
-  font-family: "Jost";
+  font-family: "Gellix";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: local("Jost"), url("fonts/vendor/jost/jost-v4-latin-700italic.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-700italic.woff") format("woff");
+  src: local("Gellix"), url("fonts/vendor/jost/jost-v4-latin-700italic.woff2") format("woff2"), url("fonts/vendor/jost/jost-v4-latin-700italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 .contributors .content,
